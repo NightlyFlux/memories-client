@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
   credits: {
     backgroundColor: 'black',
     color: 'white',
-    fontFamily: 'system-ui',
+    fontFamily: 'Arial',
     fontSize: '12px',
     margin: '0',
     padding: '4px 0',
