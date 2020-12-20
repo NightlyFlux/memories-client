@@ -19,34 +19,37 @@ const App = () => {
   }, [dispatch])
 
   return (
-    <Container maxWidth='lg'>
-      <AppBar className={classes.appBar} position='static' color='inherit'>
-        <Typography className={classes.heading} variant='h2' align='center'>
-          Memories
-        </Typography>
-        <img
-          className={classes.image}
-          src={memories}
-          alt='memories logo'
-          height='60px'
-        />
-      </AppBar>
-      <Grow in>
-        <Grid
-          className={classes.mainContainer}
-          container
-          justify='space-between'
-          alignItems='stretch'
-          spacing={4}>
-          <Grid item xs={12} md={8}>
-            <Posts setCurrentId={setCurrentId} />
+    <>
+      <p className={classes.credits}>Made by Salvador Gómez C.</p>
+      <Container maxWidth='lg'>
+        <AppBar className={classes.appBar} position='static' color='inherit'>
+          <Typography className={classes.heading} variant='h2' align='center'>
+            Memories
+          </Typography>
+          <img
+            className={classes.image}
+            src={memories}
+            alt='memories logo'
+            height='60px'
+          />
+        </AppBar>
+        <Grow in>
+          <Grid
+            className={classes.mainContainer}
+            container
+            justify='space-between'
+            alignItems='stretch'
+            spacing={4}>
+            <Grid item xs={12} md={8}>
+              <Posts setCurrentId={setCurrentId} />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Form currentId={currentId} setCurrentId={setCurrentId} />
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={4}>
-            <Form currentId={currentId} setCurrentId={setCurrentId} />
-          </Grid>
-        </Grid>
-      </Grow>
-    </Container>
+        </Grow>
+      </Container>
+    </>
   )
 }
 

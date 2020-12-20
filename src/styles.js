@@ -1,6 +1,15 @@
 import { makeStyles } from '@material-ui/core'
 
 export default makeStyles((theme) => ({
+  credits: {
+    backgroundColor: 'black',
+    color: 'white',
+    fontFamily: 'system-ui',
+    fontSize: '12px',
+    margin: '0',
+    padding: '4px 0',
+    textAlign: 'center',
+  },
   appBar: {
     borderRadius: 15,
     margin: '30px 0',
